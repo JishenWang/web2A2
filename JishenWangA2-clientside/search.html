@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity Events - Search</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav>
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="search.html">Search Events</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 搜索页内容 -->
+  <div class="container">
+    <h1 style="text-align: center; margin-bottom: 2rem; color: #2c3e50;">Search Charity Events</h1>
+
+    <!-- 搜索表单 -->
+    <form id="search-form" class="search-form">
+      <div class="form-group">
+        <label for="startDate">Start Date (Optional)</label>
+        <input type="datetime-local" id="startDate" name="startDate">
+      </div>
+      <div class="form-group">
+        <label for="endDate">End Date (Optional)</label>
+        <input type="datetime-local" id="endDate" name="endDate">
+      </div>
+      <div class="form-group">
+        <label for="location">Location (Optional, e.g., Central)</label>
+        <input type="text" id="location" name="location" placeholder="Enter location keyword">
+      </div>
+      <div class="form-group">
+        <label for="categoryId">Event Category (Optional)</label>
+        <select id="categoryId" name="categoryId">
+          <option value="">-- Select Category --</option>
+          <!-- 分类选项由JS动态加载 -->
+        </select>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Search Events</button>
+        <button type="button" id="reset-btn" class="btn btn-reset">Clear Filters</button>
+      </div>
+    </form>
+
+    <!-- 搜索结果（默认隐藏） -->
+    <div id="results-section" style="margin-top: 3rem; display: none;">
+      <h2>Search Results</h2>
+      <div id="results-container" class="events-list">
+        <!-- 加载/错误/结果由JS渲染 -->
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/search.js"></script>
+</body>
+</html>
