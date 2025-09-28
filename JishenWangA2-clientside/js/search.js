@@ -1,6 +1,5 @@
 const API_BASE_URL = 'http://localhost:3000';
 
-// DOM元素
 const searchForm = document.getElementById('search-form');
 const resetBtn = document.getElementById('reset-btn');
 const categorySelect = document.getElementById('categoryId');
@@ -97,6 +96,8 @@ function renderSearchResults(events) {
       hour: '2-digit',
       minute: '2-digit'
     });
+
+    const ticketPriceNum = event.ticket_price !== null ? Number(event.ticket_price) : 0;
     
     // 门票价格显示
     const ticketPrice = ticketPriceNum === 0 
