@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity Events - Home</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- 导航栏（所有页面统一） -->
+  <nav>
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="search.html">Search Events</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 首页内容 -->
+  <div class="container">
+    <div class="home-header">
+      <h1>City Charity Events</h1>
+      <p>Join us in supporting meaningful causes! Browse our upcoming charity events and make a difference in the community.</p>
+    </div>
+
+    <!-- 动态事件列表（由JS渲染） -->
+    <div id="events-container" class="events-list">
+      <!-- 加载提示 -->
+      <div id="loading">Loading upcoming events...</div>
+      <!-- 错误提示（默认隐藏） -->
+      <div id="error" style="display: none; color: red; text-align: center; width: 100%;"></div>
+    </div>
+  </div>
+
+  <script src="/js/home.js"></script>
+</body>
+</html>
